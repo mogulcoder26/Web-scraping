@@ -2,6 +2,7 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
     "cli-table": "^0.3.11",
+    "node-cron": "^3.0.2",
     "puppeteer": "^20.5.0",
     "request-promise": "^4.2.6"
   },
