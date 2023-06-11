@@ -16,7 +16,7 @@ async function takeScreenshot() {
 // takeScreenshot();
 
 async function scrapeNames() {
-    const browser = await puppeteer.launch()
+    const browser = await puppeteer.launch({headless:false})
     const page = await browser.newPage()
     await page.goto("https://learnwebcode.github.io/practice-requests/");
     //div.info > strong
@@ -51,7 +51,7 @@ async function scrapeNames() {
 // simulating clicking a button 
 
 async function clickSimulation(){
-    const browser = await puppeteer.launch()
+    const browser = await puppeteer.launch({headless:false})
     const page = await browser.newPage()
 
     await page.goto("https://learnwebcode.github.io/practice-requests/");
@@ -64,7 +64,7 @@ async function clickSimulation(){
     browser.close();
 }
 
-// clickSimulation();
+clickSimulation();
 
 
 //simulating submitting a form
@@ -95,4 +95,4 @@ async function submitFormAndGetData(){
 
 // But for automating it as like : 5th day of every week , etc :
 
-cron.schedule("*/5*****",submitFormAndGetData)
+// cron.schedule("*/5*****",submitFormAndGetData)
